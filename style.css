@@ -1,0 +1,571 @@
+/*
+Theme Name: e koufonisia
+Theme URI: https://e-koufonisia.com
+Author: George Simos
+Author URI: http://georgesimos.com
+Description: A directory WordPress theme that will help you create and manage a local or global listings site.
+Template: listable
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: listable-child-theme
+Domain Path: /languages/
+Tags: light, white, red
+*/
+@font-face{font-family:"PFBodoniText-Bold";font-weight:bold;src:url("assets/fonts/koufonisia-fonts/bold/PFBodoniText-Bold.eot");src:url("assets/fonts/koufonisia-fonts/bold/PFBodoniText-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/koufonisia-fonts/bold/PFBodoniText-Bold.svg#PFBodoniText-Bold") format("svg");}
+@font-face{font-family:"PFBodoniText-Regular";src:url("assets/fonts/koufonisia-fonts/regular/PFBodoniText-Regular.eot");src:url("assets/fonts/koufonisia-fonts/regular/PFBodoniText-Regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/koufonisia-fonts/regular/PFBodoniText-Regular.svg") format("svg");}
+#entry-section-content{padding:0 !important;margin:0 !important;}
+.entry-title,
+.archive-title,
+h1,
+h2,
+h3,
+.card--feature .card__title,
+ul.categories--widget .category-count,
+ul.categories--widget .category-text,
+.primary-menu > ul,
+.secondary-menu > ul,
+ul.primary-menu,
+ul.secondary-menu,
+.page-title,
+.search_location input,
+.package__title,
+.package__price,
+.search-suggestions-menu li a,
+.search_jobs--frontpage .chosen-container .chosen-results li,
+.pac-container .pac-item,
+.chosen-container-multi .chosen-choices li.search-field input[type=text],
+.chosen-container-single .chosen-single span,
+.search_jobs--frontpage-facetwp,
+.search_jobs--frontpage-facetwp input,
+.search_jobs--frontpage-facetwp select,
+.search_jobs--frontpage-facetwp .facetwp-filter-title,
+.header-facet-wrapper .facetwp-facet input,
+.header-facet-wrapper .facetwp-facet select,
+.header-facet-wrapper .facetwp-facet label,
+.site-header .site-title,
+h2.comments-title,
+.single:not(.single-job_listing) .entry-meta,
+.page .entry-meta,
+.single:not(.single-job_listing) div.sd-social.sd-social > div.sd-content.sd-content ul li > a,
+.page div.sd-social.sd-social > div.sd-content.sd-content ul li > a,
+.search_jobs select,
+.active-tag,
+.chosen-results,
+.results,
+.page-add-listing fieldset:first-child label,
+.page-job-dashboard fieldset:first-child label,
+.page-add-listing .chosen-container-multi .chosen-choices li.search-choice,
+.page-job-dashboard .chosen-container-multi .chosen-choices li.search-choice,
+.product-content .price,
+.listing-products__items [itemprop="description"]{font-family:"PFBodoniText-Bold" !important;}
+a,
+.intro,
+.description,
+.tabs.wc-tabs,
+.btn,
+input[type="submit"],
+button[type="submit"],
+.page-template-front_page .search_jobs--frontpage .search-submit,
+.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a,
+.woocommerce-account:not(.logged-in) .woocommerce form.login input[type="submit"],
+.woocommerce .button,
+.woocommerce-message > a,
+.card,
+.widget_subtitle--frontpage,
+.category-list a,
+.search-form .search-field,
+.single:not(.single-job_listing) .entry-subtitle,
+.page .entry-subtitle,
+.single-job_listing .entry-subtitle{font-family:"PFBodoniText-Regular" !important;}
+.koufonisia-image-title:lang(el){background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/05/koufonisiaintrogr.png);}
+.koufonisia-image-title{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/05/DISCOVER_KOUFONISIA.png);background-repeat:no-repeat;background-size:contain;max-width:100%;height:2em;}
+.koufonisia-img-width {
+	width: 5em;
+	font-size: 5em !important;
+}
+.gs-koufonisia-icon{filter: invert(50%);width: 50%;margin: 20px auto;}
+.koufonisia-text{text-align: justify;color: #000;padding: 0 10%;}
+.koufonisia-text h3{margin:20px auto 40px;color: inherit;}
+.koufonisia-text .half p{text-align: justify;padding: 2em;text-transform: none;}
+@media screen and (max-width:768px){.koufonisia-text .half p{padding: 0;text-transform: none;}}
+.kouf-height {height: 75vh;}
+.pano-koufonisi-img{background-image:url(https://e-koufonisia.com/wp-content/uploads/2016/12/DJI_0003-2.jpg);background-size: cover;background-repeat: no-repeat;}
+.kato-koufonisi-img{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/05/kato-kouf2.jpg);background-size: cover;background-repeat: no-repeat;}
+.keros-img{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/05/keros-sunset.jpg);background-size: cover;background-repeat: no-repeat;}
+.kouf-text{max-width: 75%; margin: 0 auto; padding: 10% 0;}
+.kouf-text h2{ text-align: center; text-transform: uppercase;}
+.kouf-text p { text-align: justify; text-transform: none;}
+@media screen and (min-width:768px) {
+	#islands, #pano-koufonisi, #kato-koufonisi, #keros{
+		clear: both;
+	}
+	#kato-koufonisi .half{
+		float: left;
+	}
+
+}
+
+/* koufonisia-page */
+.gs-container{max-width: 90%;margin: 10% auto;}
+.page-padding{padding: 5% 20%;}
+.button-video{
+	font-size: 11px;
+	display: inline-block;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	padding: 15px 35px;
+	border: 2px solid #fff;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+	-webkit-transition: all 0.2s ease-in;
+	-khtml-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+
+}
+
+.koufonisia-bg{
+	background: #fff;
+}
+
+/* video pop up */
+.full-video-popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9992;
+    background-color: #1c1c1c;
+    padding: 4.16667% 8.3334%;
+    opacity: 0;
+    visibility: hidden;
+}
+.close-full-video {
+    position: absolute;
+    display: block;
+    right: 40px;
+    top: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    z-index: 1000;
+}
+.close-full-video .icon {
+    color: #fff;
+    line-height: 40px;
+    font-size: 30px;
+    display: block;
+    -webkit-transition: all 0.2s ease-in;
+    -khtml-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.full-video-popup {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -khtml-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.full-video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.full-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* gs-btn for koufonisia */
+.gs-btn {
+    font-size: 11px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 15px 35px;
+    border: 2px solid #002b6f;
+    color: #002b6f;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease-in;
+    -khtml-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.gs-btn:hover{
+  color: #fff !important;
+  background-color: #002b6f;
+
+}
+
+
+@media only screen and (min-width: 900px)
+{
+.page-header.has-featured-image {
+    padding: 15rem 3.75rem;
+}
+}
+
+#scroll-to-me,
+#virtual-tour,
+#hotel-section{width:100vw;height:100vh;}
+@media screen and (max-width:360px){#scroll-to-me,
+#virtual-tour,
+#hotel-section{height:auto;}
+}
+.booking-bg,
+.vr-bg{height:100%;background-position:center;background-repeat:no-repeat;background-size:cover;display:flex;flex-direction:column;align-items:center;}
+.the-tour{height:100%;}
+.booking-bg{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/02/images-10.jpg);}
+.the-tour{display:none;}
+.vr-bg{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/03/ekoufonisia_image.jpg);}
+.booking-text,
+.vr-text{text-align:center;color:white;text-transform:uppercase;}
+.booking-text h2,
+.vr-text h2{margin-top:10px;color:white;font-size:2.7em;}
+.vr-text h2:nth-child(2){color:#fcbe2b;}
+@media screen and (max-width:414px){.booking-text h2,
+.vr-text h2{font-size:2em;}
+}
+.koufonisia-icon{margin:auto;}
+.koufonisia-vr-text{margin:20vh auto;}
+.koufonisia-icon img{width:auto;padding:0 15%;}
+.booking-bg button,
+.koufonisia-vr-text button{display:block;font-size:1em;font-weight:bold;margin:20px auto;border:1px solid transparent;border-radius:2em;outline:0;padding:20px 50px;color:#002b6f;background-color:#fcbe2b;text-align:center;cursor:pointer;text-decoration:none;}
+.koufonisia-vr-text button{margin:5vh auto;padding:15px 50px;border:1px solid #000;border-radius:0;box-shadow:0px 0px 0px 6px #fcbe2b;}
+.booking-bg button:hover,
+.koufonisia-vr-text button:hover{background-color:gold;}
+.hotel-logo{margin:10vh auto;width:100vw;}
+.align-icon{margin:auto;width:60%;}
+.featured-hotel{width:100%;height:100%;background-color:#f3f1f3;}
+.half{width:50%;height:100%;float:right;}
+.half:nth-child(2){float:left;}
+@media screen and (max-width:768px){.half{width:100%;height:50%;}
+}
+.pad10{padding:10%;}
+@media screen and (max-width:767px){.pad10{padding:0 10%;}
+}
+.gs_sep_line{height:30px;border-top:1px solid #000;display:block;position:relative;top:10px;width:10%;}
+.featured-hotel-button button{font-weight:normal;width:120px;min-height:30px;border-radius:3px;border-width:1px;border-color:#c5c4c6;border-style:solid;background:rgba(224,224,224,0.01);color:#c5c4c6;}
+.featured-hotel-button button:hover{background-color:gold;}
+.featured-hotel-img,
+.featured-hotel-img img{width:100%;height:100%;}
+#featured-tabs{width:100vw;}
+.filter-tabs{width:100%;background-color:#ededed;}
+@media screen and (max-width:500px){.filter-tabs{padding-top:20%;}
+}
+li.tab-link.current{background:rgba(46, 53, 61, 0.050);height:100%;}
+ul.tabs{list-style:none;background-color:#e7e5e7;height:30%;margin:0px;text-align:center;}
+ul.tabs li{background:none;color:#222;display:inline-block;padding:20px;cursor:pointer;display:inline-grid;}
+.tab-content{display:none;background:#ededed;width:100%;}
+.tab-content.current{display:inherit;}
+@media screen and (min-width:768px){.filter-tabs{position:relative;}
+article.gs-opacity{opacity:0.5;}
+article.gs-opacity:hover{opacity:1;}
+ul.tabs{width:50%;position:absolute;top:-30%;left:0;}
+.grid__item--widget{width:25%;}
+.grid--widget{margin:0;}
+.grid__item--widget{padding:0;}
+.black_opacity{position:relative;}
+.black_opacity:after{background-color:black;bottom:0;content:"";left:0;opacity:0.3;position:absolute;right:0;top:0;z-index:2;transition:all 0.5s;-webkit-transition:all 0.5s;}
+.black_opacity:hover:after{opacity:0;}
+}
+.grid--widget{margin:0;}
+.grid__item--widget{padding:0;}
+.card--listing.card--widget.is--featured{border:0;}
+.postcard--widget,
+.card--widget{max-width:100%;}
+.card--widget.card--widget{border:0;border-radius:0;box-shadow:none;}
+.card_title{font-size:24px;color:#0a0a0a;font-weight:800;text-transform:capitalize;}
+.white_title{color:#fff;}
+h2.card_title:after,
+h2.card_title.white_title:after{content:"";display:block;margin-top:0.5em;margin-bottom:0.5em;border-style:inset;border-width:1px;width:60px;left:0;}
+h2.card_title:after{border-color:#000;}
+h2.card_title.white_title:after{border-color:#fff;}
+#news_section{width:100vw;background-color:#343946;}
+.news-bg{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/03/back_news.jpg);background-repeat:no-repeat;background-size:cover;}
+.img-position{text-align:center;padding:5%;}
+img.news-icon{width:250px;}
+.great_heigth{height:100%;}
+.full_section,
+.news-grid .grid{height:100%;}
+.news-grid .card__image,
+.news-grid .card__content{height:50%;}
+.card__content{overflow:hidden;}
+div.grid a:nth-child(odd) .card__content.even_odds{background:#424b57;}
+div.grid a:nth-child(even) .card__content.even_odds{background:#fcbe2b;}
+.alm-btn-wrap{text-align:center;}
+.load_more{color:#fcbe2b;padding:0 20px;margin-top:25px;cursor:pointer;border:1px solid #fcbe2b;line-height:38px;border-radius:50px;-moz-border-radius:50px;-webkit-border-radius:50px;font-size:12px;font-weight:700;display:inline-block;margin-bottom:5px;background:transparent;}
+hr.news_divider{margin:20px auto;border:0;width:30%;height:2px;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0));box-shadow:1px 20px 11px -5px rgba(0,0,0,0.28);}
+.copyright{padding-top:20px;margin-top:0px;background-color:#302c2b;text-align:center;}
+.footer_container{display:inline-block;text-align:center;}
+.footer_container .rights{float:left;padding:10px 5px;color:#fff;}
+@media screen and (min-width:1078px){.footer_container .up{padding:0 380px;}
+}
+.footer_container .up{float:left;}
+.footer_container .theme-info{float:right;padding:10px 5px;color:#fff;}
+.backtotop,
+.backtotop::after,
+.backtotop::before,
+.backtotop .backtotop-morph{transition:all 250ms ease-in-out 0s;}
+.backtotop{border:0px dotted white;width:50px;height:50px;cursor:pointer;transform:rotate(0deg);transform-origin:center center 0;z-index:1000;}
+.backtotop::before{width:18px;height:4px;left:6px;top:56%;position:absolute;background-color:white;content:"";transform:rotate(-45deg) translateY(-50%);transform-origin:center top 0;}
+.backtotop::after{width:25px;height:4px;right:5px;top:50%;position:absolute;background-color:white;content:"";transform:rotate(45deg) translateY(-50%);transform-origin:center top 0;}
+.backtotop .backtotop-morph{background-color:white;width:15px;height:4px;left:100%;top:45%;position:absolute;opacity:0;margin-bottom:-20px;transform:translate(-50%);}
+.backtotop .backtotop-morph::before{width:0;height:0;left:-7px;top:-4px;position:absolute;border-color:transparent white transparent transparent;border-style:solid;border-width:6px 10px 6px 0;content:"";}
+.backtotop:hover{transform:rotate(90deg);}
+.backtotop:hover .backtotop-morph{left:40%;opacity:1;}
+.backtotop:hover::before{display:none;}
+.backtotop:hover::after{display:none;}
+.woocommerce-MyAccount-navigation ul:before{background-color:#00326f;}
+.woocommerce-MyAccount-navigation a{color:#fff !important;}
+.woocommerce-MyAccount-navigation ul li.is-active a{color:red;}
+body.page-login.woocommerce-account header.page-header{background-image:url(https://e-koufonisia.com/wp-content/uploads/2017/02/images-10.jpg);background-size:cover;background-repeat:no-repeat;background-position:bottom;color:white;}
+body.page-login.woocommerce-account header.page-header h1{color:#fff;}
+#entry-content-anchor .woocommerce h2{text-align:center;}
+.woocommerce-account:not(.logged-in) .woocommerce form.login{margin:10px 25%;}
+.page .entry-header.has-image{height:100vh;}
+.entry-featured-carousel .entry-featured-gallery .entry-featured-image{height:600px;}
+single:not(.single-job_listing) .entry-header.has-image:before, .page .entry-header.has-image:before{opacity:0.3;}
+.entry-featured-gallery::-webkit-scrollbar{display:none;}
+.card__featured-tag{background-color:red;}
+@media screen and (max-width:780px){.site-footer{display:none;}
+}
+.page-template-front_page .top-categories .cat__icon svg{max-height:40px;max-width:40px;height:40px;width:40px;}
+@media screen and (max-width:900px){.page-template-front_page .entry-subtitle.entry-subtitle{display:none;}
+}
+ul.categories--widget a{background:rgba(0, 0, 0, 0.2)!important;}
+.tribe-events-calendar thead th{background-color:#fff !important;}
+#tribe-bar-form .tribe-bar-submit input[type=submit]{background-color:#01a7ba;}
+@media screen and (max-width:900px){.tribe-events-event-meta{display:none;}
+}
+div#360{margin:-3.5em;}
+.category-cover:hover,
+.card:hover{box-shadow:0 0 40px #ababab;}
+@media not screen and (min-width:900px){.search-submit .gs-submit{margin-left:10px;width:90px;}
+}
+.mc4wp-alert{text-align:center;padding-top:2em;color:white;}
+.menu-scroll-down{display:block;position:relative;top:30vh;}
+.menu-scroll-down img{height:4em;width:4em;}
+.entry-content{margin-bottom:0px !important;}
+.ff-filter-holder .ff-search{display:none !important;}
+@media screen and (max-width:899px){#site-navigation.menu-wrapper{background-image:url(https://e-koufonisia.com/wp-content/uploads/2015/10/Crystal-Water.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;padding:15% 5%;width:70%;}
+.nav-is-open .menu-trigger{color:#fff;border:0;}
+.nav-is-open .menu-wrapper li{border:0;color:#fff;}
+.nav-is-open .menu-wrapper li a{color:#fff !important;font-size:1.6rem;}
+.primary-menu ul .children, ul.primary-menu .sub-menu{background-color:rgba(0, 0, 0, 0.23);box-shadow:inset 0px 0px 1px 1px black;}
+ul.primary-menu .menu-item-has-children > a:after, .primary-menu > ul .page_item_has_children > a:after{border:7px solid transparent;border-top:7px solid #fff;}
+ul.primary-menu .menu-item-has-children > a:before, .primary-menu > ul .page_item_has_children > a:before{border:1px solid rgba(255, 255, 255, 0.2);}
+}
+@keyframes spinner{to{transform:rotate(360deg);}
+}
+.ajax-loader{display:none;margin-top:1em;text-align:center;padding:.7em;}
+.ajax-loader img{animation:spinner .6s linear infinite;}
+.load-previous{border-top:1px solid #eee;padding-top:2em;}
+.load-previous .nav-subtitle{margin-bottom:2em;}
+.load-previous,
+.load-previous .nav-previous{float:none;margin-left:auto;margin-right:auto;text-align:center;}
+.load-previous a{margin-top:2em;padding:1em 2em;border:1px solid #eee;}
+.load-previous a:focus,
+.load-previous a:hover{box-shadow:none;border-color:black;}
+.generated{margin-top:4em;border-top:1px solid #eee;}
+.generated .content-area{margin-top:4em;margin-left:auto;margin-right:auto;max-width:740px;}
+
+.padding-content{
+	padding: 5%;
+}
+@media screen and (min-width:1000px) {
+	.padding-content{
+		padding: 5% 15%;
+	}
+}
+
+/* tiles */
+.flex-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.block-tiles {
+    min-height: 1200px;
+    color:#fff;
+}
+
+.flex-item {
+    background-image: url("");
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 0 0%;
+    -moz-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+}
+
+
+.block-tiles .flex-item:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+.block-tiles .flex-item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    -webkit-transition-property: filter;
+    -moz-transition-property: filter;
+    transition-property: filter;
+    -webkit-transition-duration: 1.4s;
+    -moz-transition-duration: 1.4s;
+    transition-duration: 1.4s;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.block-tiles .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 1.875em;
+    word-spacing: 1000px;
+    color: #fff !important;
+}
+
+.block-tiles .logo {
+    width: 50%;
+    margin: auto;
+}
+
+.block-tiles .flex-item:hover .text {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: .7s;
+    -moz-transition-duration: .7s;
+    transition-duration: .7s;
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.block-tiles .text {
+    width: 100%;
+    opacity: 1;
+    font-size: 2.1875em;
+    padding-top: 20px;
+    backface-visibility: hidden;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-delay: 0s,0s;
+    -moz-transition-delay: 0s,0s;
+    transition-delay: 0s,0s;
+}
+.flex-item .text h4 {
+    color: white !important;
+    font-size: 2rem;
+}
+
+@media (min-width: 769px) {
+    .flex-row {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+}
+    .block-tiles {
+        min-height: 0;
+    }
+    .block-tiles .flex-item:hover {
+        -webkit-box-flex: 2;
+        -moz-box-flex: 2;
+        box-flex: 2;
+        -webkit-flex: 2 0 0%;
+        -moz-flex: 2 0 0%;
+        -ms-flex: 2 0 0%;
+        flex: 2 0 0%;
+    }
+    .block-tiles .flex-item {
+        padding-bottom: 50vw;
+        -webkit-transition-property: flex,filter;
+        -moz-transition-property: flex,filter;
+        transition-property: flex,filter;
+        -webkit-transition-duration: 1.4s,1.4s;
+        -moz-transition-duration: 1.4s,1.4s;
+        transition-duration: 1.4s,1.4s;
+    }
+    
+    .block-tiles .flex-item:hover .text {
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    .block-hotel-tiles .text {
+        opacity: 0;
+    }
+    
+    
+}

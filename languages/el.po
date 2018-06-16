@@ -1,0 +1,126 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: e koufonisia\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-18 11:17+0000\n"
+"PO-Revision-Date: 2018-03-18 11:17+0000\n"
+"Last-Translator: George Simos <admin@georgesimos.com>\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: content-templates/tabs_section.php:60
+#: content-templates/categories_section.php:30
+msgid "Beaches"
+msgstr "Παραλίες"
+
+#: content-templates/tabs_section.php:64
+#: content-templates/categories_section.php:20
+msgid "Accommodation"
+msgstr "Διαμονή"
+
+#: content-templates/tabs_section.php:68
+#: content-templates/categories_section.php:40
+msgid "Restaurants"
+msgstr "Εστιατόρια"
+
+#: content-templates/categories_section.php:2
+#: content-templates/hotel_section.php:11
+msgid "Koufonisia Hotels"
+msgstr ""
+
+#: content-templates/hotel_section.php:36
+msgid "Start Now"
+msgstr ""
+
+#: content-templates/booking_section.php:6
+msgid "Feel the magic "
+msgstr "Ζήσε τη μαγεία "
+
+#: content-templates/booking_section.php:7
+msgid "of Koufonisia Islands"
+msgstr "στα Κουφονήσια"
+
+#: content-templates/booking_section.php:10
+#, fuzzy
+msgid "Book Now"
+msgstr "Κάνετε κράτηση"
+
+#: content-templates/vr_section.php:8
+msgid "Βroaden your horizons in 360"
+msgstr ""
+"Άνοιξε τους ορίζοντές σας…σε 360\n"
+
+#: content-templates/vr_section.php:9
+msgid "Enjoy our island in 360°"
+msgstr "Μ’ ένα click…όλο το νησί μπροστά σας."
+
+#: content-templates/vr_section.php:11
+msgid "LET'S GO"
+msgstr "ΦΥΓΑΜΕ"
+
+#. Name of the template
+msgid "Koufonisia Page"
+msgstr ""
+
+#: page-templates/koufonisia_page.php:33
+msgid "Video"
+msgstr ""
+
+#: page-templates/koufonisia_page.php:46 page-templates/front_page.php:63
+msgid "Scroll down to content"
+msgstr ""
+
+#. Name of the template
+msgid "News Page"
+msgstr ""
+
+#. Name of the template
+msgid "GS Page"
+msgstr ""
+
+#. Name of the template
+msgid "Front Page"
+msgstr ""
+
+#: inc/gs-customizer.php:18
+msgid "Front Page Options"
+msgstr ""
+
+#: inc/gs-customizer.php:26
+msgid "featured Hotel ID"
+msgstr ""
+
+#: inc/gs-customizer.php:30
+msgid "Change how much of a post is displayed on index and archive pages."
+msgstr ""
+
+#: inc/gs-customizer.php:44
+msgid "ID"
+msgstr ""
+
+#. Name of the theme
+msgid "e koufonisia"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"A directory WordPress theme that will help you create and manage a local or "
+"global listings site."
+msgstr ""
+
+#. URI of the theme
+msgid "https://e-koufonisia.com"
+msgstr ""
+
+#. Author of the theme
+msgid "George Simos"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://georgesimos.com"
+msgstr ""
